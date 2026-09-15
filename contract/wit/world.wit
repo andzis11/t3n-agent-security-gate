@@ -1,0 +1,15 @@
+package z:agent-security-gate@0.1.0;
+
+world agent-security-gate {
+  export contracts;
+}
+
+interface contracts {
+  record generic-input {
+    input: option<list<u8>>,
+    user-profile: option<list<u8>>,
+    context: option<list<u8>>,
+  }
+
+  evaluate-action: func(req: generic-input) -> result<list<u8>, string>;
+}
