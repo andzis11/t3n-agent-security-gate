@@ -1,0 +1,21 @@
+{
+  "name": "t3n-agent-security-gate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node src/demo.js",
+    "t3n:connect": "bash scripts/t3n-connect.sh",
+    "t3n:register": "bash scripts/t3n-register.sh",
+    "t3n:invoke": "bash scripts/t3n-invoke.sh",
+    "secret-scan": "node scripts/secret-scan.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@terminal3/t3n-sdk": "5.2.0"
+  }
+}

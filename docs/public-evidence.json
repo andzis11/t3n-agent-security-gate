@@ -1,0 +1,32 @@
+{
+  "project": "T3N Agent Security Gate",
+  "environment": "testnet",
+  "tenantDid": "did:t3n:09ce2cd93d157cd23967b40791d2737d53307b6a",
+  "contractName": "z:09ce2cd93d157cd23967b40791d2737d53307b6a:security-gate",
+  "contractId": 1038,
+  "version": "0.1.0",
+  "export": "evaluate-action",
+  "hostImports": [],
+  "verifiedInvocations": [
+    { "case": "bounded-action", "decision": "allow", "reason": "policy_satisfied" },
+    { "case": "approval-threshold", "decision": "require_approval", "reason": "approval_threshold_exceeded" },
+    { "case": "over-budget", "decision": "deny", "reason": "budget_exceeded" },
+    { "case": "unauthorized-action", "decision": "deny", "reason": "action_not_allowed" }
+  ],
+  "tests": {
+    "node": { "passed": 8, "failed": 0 },
+    "rustUnit": { "passed": 4, "failed": 0 },
+    "rustDoc": { "passed": 1, "failed": 0 },
+    "secretScanFindings": 0,
+    "dependencyVulnerabilities": 0
+  },
+  "artifact": {
+    "path": "contract/target/wasm32-wasip2/release/t3n_agent_security_gate_contract.wasm",
+    "bytes": 127788,
+    "sha256": "70fbed2cf65b0ae835b2ebdd22fba75ae9a7ffa9add500dc0f9d393a2ac08b6a"
+  },
+  "localEvidenceSha256": {
+    "deployment": "988c82d8e6eedef39f4ea484d7743106e179756e6088713666552ea78daa0f3d",
+    "invocation": "0d9c5f81a9d0b4e9541a9c577271666294c38ababd6da48eb74910953b762099"
+  }
+}
